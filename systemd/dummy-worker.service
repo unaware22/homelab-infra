@@ -1,0 +1,13 @@
+[Unit]
+Description=Dummy Worker DevOps Lab Service
+After=network.target
+
+[Service]
+Type=simple
+User=devops
+ExecStart=/home/devops/devops-lab/services/dummy-worker.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
